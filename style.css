@@ -5,13 +5,13 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   background: #fff7fa;
   color: #2b2b2b;
+  font-family: Arial, sans-serif;
 }
 
 .topbar {
-  background: #ec8fab;
+  background: #e88daa;
   color: white;
   text-align: center;
   padding: 10px;
@@ -27,6 +27,9 @@ header {
   align-items: center;
   padding: 25px 7%;
   border-bottom: 1px solid #f3d5df;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -38,7 +41,7 @@ header {
 .logo-symbol {
   width: 55px;
   height: 55px;
-  border: 2px solid #ec8fab;
+  border: 2px solid #e88daa;
   border-radius: 50%;
   color: #d96f91;
   display: flex;
@@ -83,14 +86,14 @@ nav a:hover {
 .icons {
   display: flex;
   gap: 18px;
-  font-size: 22px;
+  font-size: 21px;
 }
 
 .hero {
-  min-height: 520px;
+  min-height: 560px;
   background:
-    linear-gradient(to right, rgba(255, 239, 244, 0.9), rgba(255, 239, 244, 0.3)),
-    url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1400&q=80");
+    linear-gradient(to right, rgba(255, 239, 244, 0.92), rgba(255, 239, 244, 0.35)),
+    url("Bild_Armband.jpeg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -99,7 +102,10 @@ nav a:hover {
 }
 
 .hero-text {
-  max-width: 450px;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.45);
+  padding: 35px;
+  border-radius: 10px;
 }
 
 .small {
@@ -141,7 +147,7 @@ button:hover,
 }
 
 .section {
-  padding: 60px 7%;
+  padding: 65px 7%;
   text-align: center;
 }
 
@@ -149,7 +155,15 @@ button:hover,
   font-family: Georgia, serif;
   font-weight: normal;
   letter-spacing: 2px;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
+  font-size: 34px;
+}
+
+.section-text {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.7;
+  color: #555;
 }
 
 .products {
@@ -167,30 +181,30 @@ button:hover,
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(217, 111, 145, 0.15);
+  box-shadow: 0 10px 25px rgba(217, 111, 145, 0.18);
 }
 
 .img {
-  height: 230px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   margin-bottom: 20px;
 }
 
 .img1 {
-  background-image: url("https://images.unsplash.com/photo-1611085583191-a3b181a88401?auto=format&fit=crop&w=800&q=80");
+  background-image: url("Bild_Anhanger.jpeg");
 }
 
 .img2 {
-  background-image: url("https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80");
+  background-image: url("Bild_Ring.jpeg");
 }
 
 .img3 {
-  background-image: url("https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80");
+  background-image: url("Bild_Armband.jpeg");
 }
 
 .img4 {
-  background-image: url("https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=800&q=80");
+  background-image: url("Bild_Armband2.jpeg");
 }
 
 .card h3 {
@@ -214,9 +228,10 @@ button:hover,
 
 .detail-img {
   height: 520px;
-  background-image: url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1000&q=80");
+  background-image: url("Bild_Anhanger.jpeg");
   background-size: cover;
   background-position: center;
+  border-radius: 6px;
 }
 
 .detail-text h2 {
@@ -259,7 +274,7 @@ button:hover,
 }
 
 .about div {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 .about h2 {
@@ -286,6 +301,10 @@ footer h3 {
   font-family: Georgia, serif;
   font-size: 25px;
   font-weight: normal;
+}
+
+footer h4 {
+  margin-bottom: 12px;
 }
 
 footer p {
@@ -329,5 +348,9 @@ footer p {
   .secondary {
     margin-left: 0;
     margin-top: 10px;
+  }
+
+  .hero-text {
+    padding: 25px;
   }
 }
