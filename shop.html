@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | Riona Aurora Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">Kostenloser Versand ab CHF 50 ✦ Handmade Jewelry</div>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-symbol">RA</div>
+    <div>
+      <h1>Riona Aurora</h1>
+      <p>Jewelry</p>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#about">Über uns</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <a href="cart.html" class="cart-link">🛍️ <span id="cart-count">0</span></a>
+</header>
+
+<section class="page-title">
+  <p class="small">Unsere Kollektion ✦</p>
+  <h2>Shop</h2>
+  <p>
+    Hier findest du alle Schmuckstücke der Kollektion mit kurzer Beschreibung,
+    Preis und direkter Warenkorb-Funktion.
+  </p>
+</section>
+
+<section class="shop-list">
+
+  <div class="shop-item">
+    <img src="Bild_Anhanger.jpeg" alt="Golden Charm Anhänger">
+    <div>
+      <h2>Golden Charm Anhänger</h2>
+      <h3>CHF 19.90</h3>
+      <p>
+        Ein eleganter Anhänger mit goldfarbenen Details. Er wirkt schlicht,
+        verspielt und passt ideal zu einem femininen Alltagslook.
+      </p>
+      <ul>
+        <li>♡ Stil: Elegant und verspielt</li>
+        <li>✦ Farbe: Gold / Roségold</li>
+        <li>⛓ Ideal als kleines Geschenk</li>
+      </ul>
+      <button onclick="addToCart('Golden Charm Anhänger', 19.90, 'Bild_Anhanger.jpeg')">
+        In den Warenkorb
+      </button>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <img src="Bild_Ring.jpeg" alt="Heart Ring">
+    <div>
+      <h2>Heart Ring</h2>
+      <h3>CHF 14.90</h3>
+      <p>
+        Ein goldfarbener Ring mit kleinen Herzdetails. Das Design wirkt modern,
+        persönlich und eignet sich gut für einen schlichten Look.
+      </p>
+      <ul>
+        <li>♡ Stil: Romantisch und modern</li>
+        <li>✦ Farbe: Gold</li>
+        <li>⛓ Besonders für dezente Outfits geeignet</li>
+      </ul>
+      <button onclick="addToCart('Heart Ring', 14.90, 'Bild_Ring.jpeg')">
+        In den Warenkorb
+      </button>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <img src="Bild_Armband.jpeg" alt="Flower Bracelet">
+    <div>
+      <h2>Flower Bracelet</h2>
+      <h3>CHF 24.90</h3>
+      <p>
+        Ein auffälliges Armband mit floralen Elementen. Die Blumen-Details
+        machen das Schmuckstück besonders und kreativ.
+      </p>
+      <ul>
+        <li>♡ Stil: Blumig und verspielt</li>
+        <li>✦ Farbe: Gold mit hellen Details</li>
+        <li>⛓ Für besondere Looks geeignet</li>
+      </ul>
+      <button onclick="addToCart('Flower Bracelet', 24.90, 'Bild_Armband.jpeg')">
+        In den Warenkorb
+      </button>
+    </div>
+  </div>
+
+  <div class="shop-item">
+    <img src="Bild_Armband2.jpeg" alt="Soft Rose Bracelet">
+    <div>
+      <h2>Soft Rose Bracelet</h2>
+      <h3>CHF 22.90</h3>
+      <p>
+        Ein zartes Armband mit hellen Perlen und goldfarbenen Details.
+        Es wirkt weich, freundlich und passt gut zu einem sommerlichen Stil.
+      </p>
+      <ul>
+        <li>♡ Stil: Zart und freundlich</li>
+        <li>✦ Farbe: Rosa / Gold</li>
+        <li>⛓ Leicht kombinierbar</li>
+      </ul>
+      <button onclick="addToCart('Soft Rose Bracelet', 22.90, 'Bild_Armband2.jpeg')">
+        In den Warenkorb
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<footer id="contact">
+  <div>
+    <h3>Riona Aurora</h3>
+    <p>Jewelry</p>
+    <p>Schmuck mit Liebe zum Detail.</p>
+  </div>
+  <div>
+    <h4>Shop</h4>
+    <p>Armbänder</p>
+    <p>Ringe</p>
+    <p>Anhänger</p>
+  </div>
+  <div>
+    <h4>Kontakt</h4>
+    <p>info@riona-aurora.ch</p>
+    <p>Instagram: @riona.aurora</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
