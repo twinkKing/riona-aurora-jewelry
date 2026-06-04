@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warenkorb | Riona Aurora Jewelry</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">Kostenloser Versand ab CHF 50 ✦ Handmade Jewelry</div>
+
+<header>
+  <a href="index.html" class="logo">
+    <div class="logo-symbol">RA</div>
+    <div>
+      <h1>Riona Aurora</h1>
+      <p>Jewelry</p>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="index.html#about">Über uns</a>
+    <a href="#contact">Kontakt</a>
+  </nav>
+
+  <a href="cart.html" class="cart-link">🛍️ <span id="cart-count">0</span></a>
+</header>
+
+<section class="page-title">
+  <p class="small">Deine Auswahl ✦</p>
+  <h2>Warenkorb</h2>
+  <p>Hier kannst du deine ausgewählten Produkte ansehen, löschen und den Gesamtpreis sehen.</p>
+</section>
+
+<section class="cart-section">
+  <div id="cart-items"></div>
+
+  <div class="cart-summary">
+    <h2>Zusammenfassung</h2>
+    <p>Gesamtpreis:</p>
+    <h3 id="cart-total">CHF 0.00</h3>
+
+    <button onclick="clearCart()">Warenkorb leeren</button>
+    <a href="shop.html" class="btn secondary-link">Weiter einkaufen</a>
+  </div>
+</section>
+
+<footer id="contact">
+  <div>
+    <h3>Riona Aurora</h3>
+    <p>Jewelry</p>
+    <p>Schmuck mit Liebe zum Detail.</p>
+  </div>
+  <div>
+    <h4>Shop</h4>
+    <p>Armbänder</p>
+    <p>Ringe</p>
+    <p>Anhänger</p>
+  </div>
+  <div>
+    <h4>Kontakt</h4>
+    <p>info@riona-aurora.ch</p>
+    <p>Instagram: @riona.aurora</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
