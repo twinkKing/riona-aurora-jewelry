@@ -36,6 +36,8 @@ header {
   display: flex;
   align-items: center;
   gap: 15px;
+  text-decoration: none;
+  color: #2b2b2b;
 }
 
 .logo-symbol {
@@ -71,7 +73,8 @@ nav {
   gap: 28px;
 }
 
-nav a {
+nav a,
+.cart-link {
   text-decoration: none;
   color: #222;
   font-size: 13px;
@@ -79,14 +82,22 @@ nav a {
   letter-spacing: 1px;
 }
 
-nav a:hover {
+nav a:hover,
+.cart-link:hover {
   color: #d96f91;
 }
 
-.icons {
-  display: flex;
-  gap: 18px;
-  font-size: 21px;
+.cart-link {
+  font-size: 20px;
+}
+
+#cart-count {
+  background: #e67f9f;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 50%;
+  vertical-align: top;
 }
 
 .hero {
@@ -103,9 +114,10 @@ nav a:hover {
 
 .hero-text {
   max-width: 480px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.55);
   padding: 35px;
-  border-radius: 10px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
 }
 
 .small {
@@ -116,20 +128,36 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-.hero h2 {
+.hero h2,
+.page-title h2,
+.detail-text h2,
+.shop-item h2,
+.about h2 {
   font-family: Georgia, serif;
-  font-size: 48px;
   font-weight: normal;
+}
+
+.hero h2 {
+  font-size: 48px;
   margin-bottom: 20px;
 }
 
+.hero p,
+.page-title p,
+.detail-text p,
+.shop-item p,
+.about p {
+  line-height: 1.8;
+}
+
 .hero p {
-  line-height: 1.7;
   margin-bottom: 30px;
 }
 
 .btn,
-button {
+button,
+.secondary-link {
+  display: inline-block;
   background: #e67f9f;
   color: white;
   border: none;
@@ -142,79 +170,13 @@ button {
 }
 
 button:hover,
-.btn:hover {
+.btn:hover,
+.secondary-link:hover {
   background: #d96f91;
 }
 
-.section {
-  padding: 65px 7%;
-  text-align: center;
-}
-
-.section h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
-  font-size: 34px;
-}
-
-.section-text {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
-  line-height: 1.7;
-  color: #555;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.card {
-  background: white;
-  border: 1px solid #f3d5df;
-  padding-bottom: 25px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(217, 111, 145, 0.18);
-}
-
-.img {
-  height: 250px;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 20px;
-}
-
-.img1 {
-  background-image: url("Bild_Anhanger.jpeg");
-}
-
-.img2 {
-  background-image: url("Bild_Ring.jpeg");
-}
-
-.img3 {
-  background-image: url("Bild_Armband.jpeg");
-}
-
-.img4 {
-  background-image: url("Bild_Armband2.jpeg");
-}
-
-.card h3 {
-  margin-bottom: 8px;
-  font-size: 17px;
-}
-
-.card p {
-  color: #d96f91;
-  margin-bottom: 18px;
+.secondary-link {
+  margin-left: 10px;
 }
 
 .product-detail {
@@ -231,41 +193,35 @@ button:hover,
   background-image: url("Bild_Anhanger.jpeg");
   background-size: cover;
   background-position: center;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .detail-text h2 {
-  font-family: Georgia, serif;
   font-size: 42px;
-  font-weight: normal;
   margin-bottom: 15px;
 }
 
-.detail-text h3 {
+.detail-text h3,
+.shop-item h3,
+.cart-summary h3 {
   color: #d96f91;
   font-size: 24px;
   margin-bottom: 25px;
 }
 
 .detail-text p {
-  line-height: 1.8;
   margin-bottom: 25px;
 }
 
-.detail-text ul {
+.detail-text ul,
+.shop-item ul {
   list-style: none;
   margin-bottom: 25px;
 }
 
-.detail-text li {
+.detail-text li,
+.shop-item li {
   margin-bottom: 12px;
-}
-
-.secondary {
-  background: white;
-  color: #d96f91;
-  border: 1px solid #d96f91;
-  margin-left: 10px;
 }
 
 .about {
@@ -278,15 +234,119 @@ button:hover,
 }
 
 .about h2 {
-  font-family: Georgia, serif;
-  font-weight: normal;
   font-size: 35px;
   margin-bottom: 20px;
 }
 
 .about p {
-  line-height: 1.8;
   margin-bottom: 15px;
+}
+
+.page-title {
+  text-align: center;
+  padding: 70px 7% 35px;
+  background: #fff7fa;
+}
+
+.page-title h2 {
+  font-size: 46px;
+  margin-bottom: 15px;
+}
+
+.page-title p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.shop-list {
+  padding: 40px 7% 70px;
+  display: grid;
+  gap: 35px;
+}
+
+.shop-item {
+  background: white;
+  border: 1px solid #f3d5df;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 40px;
+  padding: 30px;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(217, 111, 145, 0.08);
+}
+
+.shop-item img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.shop-item h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.cart-section {
+  padding: 40px 7% 70px;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 35px;
+  align-items: start;
+}
+
+.cart-item {
+  background: white;
+  border: 1px solid #f3d5df;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item h3 {
+  margin-bottom: 8px;
+}
+
+.remove-btn {
+  background: white;
+  color: #d96f91;
+  border: 1px solid #d96f91;
+}
+
+.cart-summary {
+  background: white;
+  border: 1px solid #f3d5df;
+  padding: 30px;
+  border-radius: 10px;
+  position: sticky;
+  top: 120px;
+}
+
+.cart-summary h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.empty-cart {
+  background: white;
+  padding: 35px;
+  border: 1px solid #f3d5df;
+  border-radius: 10px;
+  text-align: center;
 }
 
 footer {
@@ -323,31 +383,34 @@ footer p {
     justify-content: center;
   }
 
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .product-detail {
+  .product-detail,
+  .shop-item,
+  .cart-section {
     grid-template-columns: 1fr;
   }
 
   .hero h2 {
     font-size: 36px;
   }
+
+  .secondary-link {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 }
 
 @media (max-width: 600px) {
-  .products {
+  .cart-item {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin: 0 auto;
   }
 
   footer {
     grid-template-columns: 1fr;
-  }
-
-  .secondary {
-    margin-left: 0;
-    margin-top: 10px;
   }
 
   .hero-text {
